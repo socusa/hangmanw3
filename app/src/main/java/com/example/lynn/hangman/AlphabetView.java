@@ -27,7 +27,7 @@ public class AlphabetView extends TableLayout {
         TableRow row = new TableRow(context);
 
         for (int counter=0;counter<13;counter++) {
-            TableRow.LayoutParams params = new TableRow.LayoutParams(2*width/39,50);
+            TableRow.LayoutParams params = new TableRow.LayoutParams(2*width/39,100);
 
             alphabet[counter].setLayoutParams(params);
 
@@ -39,7 +39,7 @@ public class AlphabetView extends TableLayout {
         row = new TableRow(context);
 
         for (int counter=13;counter<26;counter++) {
-            TableRow.LayoutParams params = new TableRow.LayoutParams(2*width/39,50);
+            TableRow.LayoutParams params = new TableRow.LayoutParams(2*width/39,100);
 
             alphabet[counter].setLayoutParams(params);
 
