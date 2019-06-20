@@ -9,6 +9,8 @@ public class HangmanView extends View {
 
     public HangmanView(Context context) {
         super(context);
+
+        setBackgroundColor(0xFF00008F);
     }
 
 }

@@ -9,6 +9,8 @@ public class ButtonsView extends LinearLayout {
 
     public ButtonsView(Context context) {
         super(context);
+
+        setBackgroundColor(0xFF8F0000);
     }
 
 }
