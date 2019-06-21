@@ -12,11 +12,9 @@ public class MyListener implements View.OnClickListener {
         Button source = (Button)view;
 
         if (source == start) {
-            word = getWord().toUpperCase();
 
-            buttonsView.setWord();
 
-            start.setText((start.getText().equals("Start")) ? "Restart" : "Start");
+            start.setText("Restart");
         } else {
 
         }
