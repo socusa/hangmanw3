@@ -16,7 +16,7 @@ public class ButtonsView extends LinearLayout {
         for (int counter=0;counter<buttons.length;counter++) {
             buttons[counter] = new Button(getContext());
 
-            int width = Math.min(50,2*MainActivity.width/(3*buttons.length));
+            int width = Math.min(100,2*MainActivity.width/(3*buttons.length));
 
             LayoutParams layoutParams = new LayoutParams(width,100);
 
