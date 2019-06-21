@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        helper = new MyDatabaseHelper(this);
+
+        database = helper.getReadableDatabase();
+
         setContentView(myView = new MyView(this));
     }
 }
