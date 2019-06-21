@@ -32,6 +32,20 @@ public class HangmanView extends View {
     public void onDraw(Canvas canvas) {
         if (drawHead) {
             canvas.drawCircle(width/6,100,50,paint);
+
+            canvas.drawLine(width/6,150,width/6,200,paint);
+        }
+
+        if (drawLeftArm) {
+            canvas.drawLine(width/6,200,width/6 - width/12,300,paint);
+        }
+
+        if (drawRightArm) {
+            canvas.drawLine(width/6,200,width/6 + width/12,300,paint);
+        }
+
+        if (drawBody) {
+            canvas.drawLine(width/6,200,width/6,700,paint);
         }
     }
 
