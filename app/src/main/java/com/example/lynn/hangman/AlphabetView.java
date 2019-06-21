@@ -9,6 +9,11 @@ import static com.example.lynn.hangman.MainActivity.*;
 
 public class AlphabetView extends TableLayout {
 
+    public void reset() {
+        for (int counter=0;counter<alphabet.length;counter++)
+            alphabet[counter].setVisibility(VISIBLE);
+    }
+
     public AlphabetView(Context context) {
         super(context);
 

@@ -26,6 +26,11 @@ public class ButtonsView extends LinearLayout {
         }
     }
 
+    public void showCharacters() {
+        for (int counter=0;counter<buttons.length;counter++)
+            buttons[counter].setText(word.substring(counter,counter+1));
+    }
+
     public ButtonsView(Context context) {
         super(context);
 

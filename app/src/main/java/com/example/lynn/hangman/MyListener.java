@@ -16,9 +16,34 @@ public class MyListener implements View.OnClickListener {
 
             buttonsView.setWord();
 
+            hangmanView.reset();
+
+            alphabetView.reset();
 
             start.setText("Restart");
-        } else {
+        } else if (numberMissed < 6) {
+            char letter = source.getText().charAt(0);
+
+            boolean found = false;
+
+            for (int counter=0;counter<buttons.length;counter++) {
+                if (letter == word.charAt(counter)) {
+                    buttons[counter].setText("" + letter);
+
+                    found = true;
+                }
+            }
+
+            source.setVisibility(View.INVISIBLE);
+
+            if (!found) {
+                numberMissed++;
+
+                hangmanView.check();
+            }
+
+            if (numberMissed == 6)
+                buttonsView.showCharacters();
 
         }
 
