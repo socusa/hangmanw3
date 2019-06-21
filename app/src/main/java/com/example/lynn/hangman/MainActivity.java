@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public static int width;
     public static int height;
     public static String word;
+    public static ControlView controlView;
 
     public static String getWord() {
         java.util.List<String> words = new ArrayList<>();

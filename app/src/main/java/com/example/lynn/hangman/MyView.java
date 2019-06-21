@@ -16,7 +16,7 @@ public class MyView extends RelativeLayout {
         width = sizeOfScreen.x;
         height = sizeOfScreen.y;
 
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(2*width/3,3*height/4);
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(2*width/3,height/2);
 
         buttonsView = new ButtonsView(context);
 
@@ -29,6 +29,18 @@ public class MyView extends RelativeLayout {
         params = new RelativeLayout.LayoutParams(2*width/3,height/4);
 
         params.addRule(BELOW,buttonsView.getId());
+
+        controlView = new ControlView(context);
+
+        controlView.setId(generateViewId());
+
+        controlView.setLayoutParams(params);
+
+        addView(controlView);
+
+        params = new RelativeLayout.LayoutParams(2*width/3,height/4);
+
+        params.addRule(BELOW,controlView.getId());
 
         alphabetView = new AlphabetView(context);
 
