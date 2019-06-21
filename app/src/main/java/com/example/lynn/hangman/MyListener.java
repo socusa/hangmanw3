@@ -11,14 +11,12 @@ public class MyListener implements View.OnClickListener {
     public void onClick(View view) {
         Button source = (Button)view;
 
-        if (source.getText().equals("Start")) {
+        if (source == start) {
             word = getWord().toUpperCase();
 
             buttonsView.setWord();
 
-            start.setText("Restart");
-        } else if (source.getText().equals("Restart")) {
-
+            start.setText((start.getText().equals("Start")) ? "Restart" : "Start");
         } else {
 
         }
